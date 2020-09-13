@@ -15,4 +15,5 @@ RUN     mkdir -p /var/cache/distfiles && \
         chown -R builder:builder /usr/src && \
         sudo -u builder abuild-keygen -aiqn && \
         sudo -u builder abuild checksum && \
-        sudo -u builder abuild
+        sudo -u builder abuild && \
+	mv /home/builder/packages/usr/x86_64/*.apk /home/builder/packages/usr/x86_64/dovecot.apk
